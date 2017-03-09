@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/bt_first_yes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="106dp"
+        android:text="确定" />
+
+    <EditText
+        android:id="@+id/et_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="你的名字？"
+        android:inputType="textPersonName"
+        android:text="xc"
+        android:textAlignment="center"
+        android:layout_above="@+id/bt_first_yes"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_first_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="36dp"
+        android:text="xl 3.12\nwyy 3.12\nzyf 4.1\nlcy 4.5\nldy 4.5\njy 4.26\nwj 4.16\nzrj 4.27\ntf 4.28"
+        android:textSize="25dp" />
+
+    <EditText
+        android:id="@+id/et_devmoule"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_alignTop="@+id/tv_first_name"
+        android:layout_alignParentEnd="true" />
+
+    <EditText
+        android:id="@+id/et_deviceid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/et_devmoule"
+        android:layout_below="@+id/et_devmoule"
+        android:ems="10"
+        android:inputType="textCapCharacters|textPersonName" />
+
+    <Button
+        android:id="@+id/bt_first_fanyi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/bt_first_yes"
+        android:layout_below="@+id/et_first_name"
+        android:layout_marginTop="47dp"
+        android:text="翻译" />
+
+</RelativeLayout>
