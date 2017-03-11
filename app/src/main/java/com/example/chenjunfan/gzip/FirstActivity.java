@@ -9,6 +9,7 @@ import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
@@ -23,6 +24,7 @@ import java.io.FileWriter;
 public class FirstActivity extends Activity{
     EditText nameET,devmET,deviET;
     Button yesBT,fanyiBT;
+    String[] strModle= new String[]{"Google Nexus5","SM-G9350","Redmi Note 2","SM-G9200","SM-G9300","SM-G9208","SM-G9201","Redmi Note 3","Xiaomi 5"};
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,12 +36,12 @@ public class FirstActivity extends Activity{
 
         nameET = (EditText) findViewById(R.id.et_first_name);
         yesBT = (Button) findViewById(R.id.bt_first_yes);
-        devmET = (EditText) findViewById(R.id.et_devmoule);
-        deviET = (EditText) findViewById(R.id.et_deviceid);
+//        devmET = (EditText) findViewById(R.id.et_devmoule);
+//        deviET = (EditText) findViewById(R.id.et_deviceid);
         fanyiBT = (Button) findViewById(R.id.bt_first_fanyi);
 
-        devmET.setText(Build.MODEL);
-        deviET.setText(Settings.Secure.getString(FirstActivity.this.getContentResolver(), "android_id"));
+//        devmET.setText(Build.MODEL);
+//        deviET.setText(Settings.Secure.getString(FirstActivity.this.getContentResolver(), "android_id"));
 
         yesBT.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,14 +54,15 @@ public class FirstActivity extends Activity{
                 }
                 else if(nameET.getText().toString().equals("xc"))
                 {
-                    Common.devmoule="SM-G9350";
+                    Common.devmoule="Google Pixcle";
                     Common.deviceID = "6f2c22badc1596d5";
                 }
                 else
                 {
-                    Common.devmoule="Redmi Note 2";
-                    Common.deviceID = "4653b015ad8ef22d";
+                    Common.devmoule=strModle[(int)(Math.random()*strModle.length)];
+                    Common.deviceID = Common.getRandom(99,11)+Common.getRandom(99,11)+"b015ad8ef"+Common.getRandom(99,11)+"d";
                 }
+                Toast.makeText(FirstActivity.this, Common.devmoule + " " + Common.deviceID, Toast.LENGTH_SHORT).show();
                 startActivity(new Intent(FirstActivity.this,MainActivity.class));
             }
         });

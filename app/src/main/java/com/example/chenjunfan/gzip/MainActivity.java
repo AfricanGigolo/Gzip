@@ -98,6 +98,54 @@ public class MainActivity extends AppCompatActivity {
         {
             setText("田凤","041400806","56761708563026726","13");
         }
+        else if(Common.who.equals("ch"))
+        {
+            setText("彩虹","061510304","45473860802956069","06");
+        }
+        else if(Common.who.endsWith("a1"))
+        {
+            setText("施展","071430302","47733481307776035","07");
+        }
+        else if(Common.who.endsWith("a2"))
+        {
+            setText("杨松","071430307","57225747340752283","07");
+        }
+        else if(Common.who.endsWith("a3"))
+        {
+            setText("苏攀","071430310","46349343370451291","07");
+        }
+        else if(Common.who.endsWith("a4"))
+        {
+            setText("张家硕","071430318","57226733443840072","07");
+        }
+        else if(Common.who.endsWith("a5"))
+        {
+            setText("李维龙","071430309","57243385785206851","07");
+        }
+        else if(Common.who.endsWith("a6"))
+        {
+            setText("张元熹","071430312","57389827953074279","07");
+        }
+        else if(Common.who.endsWith("a7"))
+        {
+            setText("朱江","071430306","57243065999079660","07");
+        }
+        else if(Common.who.endsWith("a8"))
+        {
+            setText("肖天","071430313","46949275911841546","07");
+        }
+        else if(Common.who.endsWith("a9"))
+        {
+            setText("宁顺刚","071430304","49443118312027073","07");
+        }
+        else if(Common.who.endsWith("a10"))
+        {
+            setText("","","","");
+        }
+        else if(Common.who.endsWith("a11"))
+        {
+            setText("","","","");
+        }
         else
         {
             setText(Common.who,"","","");
@@ -133,15 +181,17 @@ public class MainActivity extends AppCompatActivity {
     private void setText(String name1,String stuid1,String userid1,String collegeNo1)
     {
         SimpleDateFormat formatter = new SimpleDateFormat ("yyyy-MM-dd");
+        SimpleDateFormat formatter2 = new SimpleDateFormat ("HH");
         Date curDate = new Date(System.currentTimeMillis());//获取当前时间
         String date = formatter.format(curDate);
         nameET.setText(name1);
         stuidET.setText(stuid1);
         useridET.setText(userid1);
         dateET.setText(date);
-        hourET.setText("12");
-        distanceET.setText("1760");
+        hourET.setText((Integer.parseInt(formatter2.format(curDate))-Common.getRandom(4,1))+"");
+        distanceET.setText(Common.getRandom(199,150)+"0");
         collegeNoET.setText(collegeNo1);
+        durtimeET.setText(Common.getRandom(19,15)+":"+Common.getRandom(59,10));
     }
 
 
