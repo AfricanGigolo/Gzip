@@ -102,49 +102,61 @@ public class MainActivity extends AppCompatActivity {
         {
             setText("彩虹","061510304","45473860802956069","06");
         }
-        else if(Common.who.endsWith("a1"))
+        else if(Common.who.equals("a1"))
         {
             setText("施展","071430302","47733481307776035","07");
         }
-        else if(Common.who.endsWith("a2"))
+        else if(Common.who.equals("a2"))
         {
             setText("杨松","071430307","57225747340752283","07");
         }
-        else if(Common.who.endsWith("a3"))
+        else if(Common.who.equals("a3"))
         {
             setText("苏攀","071430310","46349343370451291","07");
         }
-        else if(Common.who.endsWith("a4"))
+        else if(Common.who.equals("a4"))
         {
             setText("张家硕","071430318","57226733443840072","07");
         }
-        else if(Common.who.endsWith("a5"))
+        else if(Common.who.equals("a5"))
         {
             setText("李维龙","071430309","57243385785206851","07");
         }
-        else if(Common.who.endsWith("a6"))
+        else if(Common.who.equals("a6"))
         {
             setText("张元熹","071430312","57389827953074279","07");
         }
-        else if(Common.who.endsWith("a7"))
+        else if(Common.who.equals("a7"))
         {
             setText("朱江","071430306","57243065999079660","07");
         }
-        else if(Common.who.endsWith("a8"))
+        else if(Common.who.equals("a8"))
         {
             setText("肖天","071430313","46949275911841546","07");
         }
-        else if(Common.who.endsWith("a9"))
+        else if(Common.who.equals("a9"))
         {
             setText("宁顺刚","071430304","49443118312027073","07");
         }
-        else if(Common.who.endsWith("a10"))
+        else if(Common.who.equals("a10"))
         {
-            setText("","","","");
+            setText("梁小强","071430305","56116938993965699","07");
         }
-        else if(Common.who.endsWith("a11"))
+        else if(Common.who.equals("a11"))
         {
-            setText("","","","");
+            setText("杨飞","071430308","57456706428713956","07");
+        }
+        else if(Common.who.equals("rgd"))
+        {
+            setText("饶港迪","071430229","47653044530617522","07");
+        }
+        else if(Common.who.equals("wl"))
+        {
+            setText("吴磊","071430130","56766150454871698","07");
+        }
+        else if(Common.who.equals("czx"))
+        {
+            setText("陈志贤","161610333","14093702881212601","16");
         }
         else
         {
